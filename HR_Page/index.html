@@ -1172,7 +1172,7 @@
         };
 
         try {
-            const response = await fetch('http://localhost:3111/api/payslips', {
+            const response = await fetch('http://13.232.23.97:3034/api/payslips', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(formData)
@@ -1225,7 +1225,7 @@
             if (month) params.append('month', month);
             if (year) params.append('year', year);
 
-            const url = `http://localhost:3111/api/payslips/history?${params.toString()}`;
+            const url = `http://13.232.23.97:3034/api/payslips/history?${params.toString()}`;
             const response = await fetch(url);
 
             const contentType = response.headers.get('Content-Type') || '';
